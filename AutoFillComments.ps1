@@ -1,6 +1,6 @@
 $initpath = "c:\"
-# This function creates the dialog box to choose the checklist file
 
+# This function creates the dialog box to choose the checklist file
 Function Get-FileName($initialDirectory)
 {   
   [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") |
@@ -44,4 +44,4 @@ ForEach ($Attr in $xml.CHECKLIST.STIGS.iSTIG.VULN) {
 $destination = Split-Path -Path $path -Parent
 $filename = [io.path]::GetFileNameWithoutExtension("$path")
 $xml.Save($destination + "\" + $filename + "_$savedate.ckl")
-exit
+
