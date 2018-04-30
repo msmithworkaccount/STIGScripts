@@ -44,4 +44,3 @@ ForEach ($Attr in $xml.CHECKLIST.STIGS.iSTIG.VULN) {
 $destination = Split-Path -Path $path -Parent
 $filename = [io.path]::GetFileNameWithoutExtension("$path")
 $xml.Save($destination + "\" + $filename + "_$savedate.ckl")
-
